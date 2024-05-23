@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'template_driven_form';
+  Users:any[]=[]
+  SignupUser(value:any){
+    if((value.value.name !=""&&value.value.email !=""&&value.value.password!="")){
+      console.log(value.value);
+      this.Users.push(value.value)
+      value.reset()
+    }
+    console.log(this.Users);
+  }
+  
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "template_driven_form": {
+    "Reactive_Form": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/template_driven_form",
+            "outputPath": "dist/reactive-form",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "template_driven_form:build:production"
+              "browserTarget": "Reactive_Form:build:production"
             },
             "development": {
-              "browserTarget": "template_driven_form:build:development"
+              "browserTarget": "Reactive_Form:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "template_driven_form:build"
+            "browserTarget": "Reactive_Form:build"
           }
         },
         "test": {
@@ -94,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "58b7e7d6-024a-4acd-9ee7-71953e49a806"
   }
 }
