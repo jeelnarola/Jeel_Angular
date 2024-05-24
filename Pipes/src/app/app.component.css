@@ -1,0 +1,24 @@
+table{
+    width: 500px;
+    background-color: black;
+    border-bottom: 2px solid black;
+    border-top: 3px solid black;
+    box-shadow: 10px 20px 10px rgba(0,0,0,0.2);
+    margin: 30px 0px;
+}
+table thead{
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+}
+table thead tr th{
+    padding: 10px;
+}                                                   
+table tbody{
+   background-color: bisque;
+   text-align: center;
+   border: 1px solid black;
+}
+table tbody tr td{
+    padding: 10px 0px;
+}

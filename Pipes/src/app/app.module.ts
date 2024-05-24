@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { UsdInrPipe } from './Custompipes/usd-inr.pipe';
+import { FilterPipe } from './filterPipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsdInrPipe,
+    FilterPipe,
   ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule
+    BrowserModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

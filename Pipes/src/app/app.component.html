@@ -1,0 +1,78 @@
+<hr>
+<h1>uppercase :- {{Uppercasepipes|uppercase}}</h1>
+<h1>lowercase :- {{Lowercasepipes|lowercase}}</h1>
+<h1>titlecase :- {{Capitalizepipes| titlecase}}</h1>
+<hr>
+<hr>
+<h2>Date pipes using parameters </h2>
+<h1>{{Datepipe}}</h1>
+<h1>Date &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-: {{Datepipe|date}}</h1>
+<h1>Short &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;-: {{ Datepipe | date: 'short' }}</h1>
+<h1>Medium &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; -: {{ Datepipe | date: 'medium' }}</h1>
+<h1>Long&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;-: {{ Datepipe | date: 'long' }}</h1>
+<h1>shortDate &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;-: {{ Datepipe | date: 'shortDate' }}</h1>
+<h1>mediumDate &nbsp;  &nbsp; &nbsp;-: {{ Datepipe | date: 'mediumDate' }}</h1>
+<h1>longDate &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;-: {{ Datepipe | date: 'longDate' }}</h1>
+<h1>FullDate &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;-: {{ Datepipe | date: 'fullDate' }}</h1>
+<h1>shortTime &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp;-: {{ Datepipe | date: 'shortTime' }}</h1>
+<h1>mediumTime &nbsp;  &nbsp;-: {{ Datepipe | date: 'mediumTime' }}</h1>
+<h1>longTime &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;-: {{ Datepipe | date: 'longTime' }}</h1>
+<hr>
+<hr>
+<h2>currency Pipes</h2>
+<h1>USD :- {{ amount | currency:'USD' }}</h1>
+<h1>INR :- {{ amount | currency:'INR' }}</h1>
+<hr>
+<hr>
+<h1>{{decimalpipe| number:"1.2-2"}}</h1>
+<h1>{{decimalpipe| number:"1.2"}}</h1>
+<hr>
+<h2>percent pipe</h2>
+<h1>{{ percentpipe | percent}}</h1>
+<hr>
+<hr>
+<h2>Slice pipe</h2>
+<h1>Content :- {{silcepipe}}</h1>
+<h1>Silce Pipe :- {{silcepipe | slice:0:10}}</h1>
+<hr>
+<hr>
+<h2>Chainaing Pipes</h2>
+<h1>Content :- {{silcepipe}}</h1>
+<h1>Chainaing Pipes :- {{silcepipe | uppercase | slice:0:5 }}</h1>
+<h1>Chainaing Pipes :- {{Datepipe | date:'fullDate' | titlecase }}</h1>
+<hr>
+<hr>
+<h2>JSON Pipes</h2>
+<h1>json :- {{jsonpipe | json | titlecase}}</h1>
+<hr>
+<hr>
+<h2>coustom Pipes</h2>
+<!-- two parameter -->
+<!-- <h1>{{20 | usdInr : 72 :24}}</h1> -->
+<ul>
+    <li *ngFor="let item of arry">{{item |usdInr }}</li>
+</ul>
+<hr>
+<hr>
+<h2>Filter Pipes</h2>
+<div class="Serach">
+    <input type="text" placeholder="Serach Product by Name" [(ngModel)]="search">
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Sno</th>
+            <th>Product Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of filterPipes | filter:search.toLowerCase()" >
+            <td >{{item.sno}}</td>
+            <td >{{item.name}}</td>
+            <td >{{item.price | currency:"INR"}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<hr>
