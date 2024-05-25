@@ -1,0 +1,26 @@
+<p>table works!</p>
+<div class="col-6 mx-auto text-center">
+    <table  class="col-5 table table-striped mt-5 p-5">
+        <thead>
+          <tr>
+            <th >No</th>
+            <th >First</th>
+            <th >Age</th>
+            <th >Email</th>
+            <th >Action</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let item of users; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.email}}</td>
+            <td>
+               <button class="btn btn-primary ms-1">Edit</button>
+               <button class="btn btn-danger ms-3" (click)="deletebtn(item.id)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+      </table>
+</div>
